@@ -1,0 +1,306 @@
+\documentclass{beamer}
+%\usetheme[left,width=80]{Marburg}
+%\usetheme{Madrid}
+%\usetheme{AnnArbor}
+\usetheme{Antibes}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+\useinnertheme{rounded}
+\usefonttheme{serif}
+\setbeamertemplate{footline}[page number]{}
+\setbeamertemplate{navigation symbols}{}
+\title{CSE471 - Free and Open Source Software}
+\author[Dayanand V]{Dayanand V \\ \texttt{v\_dayanand@cb.amrita.edu}}
+\institute{Dept. of Computer Science and Engineering\\Amrita School of Engineering\\Amrita Vishwa Vidyapeetham}
+\date{\today}
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>{Contents}
+	\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+\begin{document}
+\begin{frame}
+	\titlepage
+\end{frame}
+\begin{frame}{Credits}
+\textbf{The credits for the contents of this presentation goes to Karl Fogel and his book ``Producing Open Source Software". You are as free to reuse and redistribute the contents of this presentation as I am in using Fogel's book's content.}
+\end{frame}
+\section{Introduction}
+
+\begin{frame}{Introduction}
+\begin{itemize}
+	\item About 90-95\% free software projects fail. Why?
+	\pause
+	\begin{itemize}
+		\item Unrealistic requirements
+		\item Vague specifications
+		\item Poor resource management
+		\item Insufficient design phases
+	\end{itemize}
+	\pause
+	\item Aren't these the same reasons why closed-source projects fail?
+	\pause
+	\begin{itemize}
+		\item Yes, and there's more.
+	\end{itemize}
+	\pause
+	\item Sometimes, the developers do not appreciate the problems unique to open source development. \pause Like?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction}
+	\begin{itemize}
+	\item More reasons why open source projects fail.
+	\begin{enumerate}
+		\item Expecting hordes of oompa-loompas to magically volunteer for you.
+		\item Expecting that releasing the source will be a cure of all its ills.
+		\item Skimping on presentation and packaging to develop ``more important stuff".
+		\item Expecting that the same management practices used for in-house development will work equally well on an open source project.
+		\item Failures of ``Cultural Navigation".
+	\end{enumerate}
+	\end{itemize}
+\begin{quote}
+\tiny{``Open source does work, but it is most definitely not a panacea. If there's a cautionary tale here, it is that you can't take a dying project, sprinkle it with the magic pixie dust of ``open source," and have everything magically work out. Software is hard. The issues aren't that simple."
+-Jamie Zawinski,  The Mozilla Project}
+\end{quote}
+\end{frame}
+
+\section{History}
+
+\begin{frame}{History}
+\begin{itemize}
+	\item At the dawn of commercial computers, `Software' sounded closer to an accessory than a business asset. \pause
+	\item Customers (scientists, technicians etc) distributed patches to other customers and it was encouraged by the manufacturers. \pause
+	\item There was no hardware standardization and the manufacturer wanted machine-specific code and knowledge to spread as widely as possible. \pause
+	\item There was no Internet, and widespread frictionless sharing as we know it today, was not possible.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Rise of Proprietary Software and Free Software}
+\begin{itemize}
+	\item The advent of better `hardware' and 'high level' programming languages. \pause
+	\item Selling software began looking like a good strategy. \pause
+	\item If the user had freedom to modify the software and improve it, the `added value' patches would be of lesser significance. \pause
+	\item Shared code can reach competitors. \pause
+	\item Ironically, the Internet was getting off the ground around the same time.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Rise of Proprietary Software and Free Software - Conscious Resistance}
+\begin{itemize}
+	\item ``Richard Stallman" happened.
+\end{itemize}
+\begin{quote}
+		\tiny{``We did not call our software "free software", because that term did not yet exist; but that is what it was. Whenever people from another university or a company wanted to port and use a program, we gladly let them. If you saw someone using an unfamiliar and interesting program, you could always ask to see the source code, so that you could read it, change it, or cannibalize parts of it to make a new program." -Richard Stallman}
+\end{quote} \pause	
+\begin{itemize}
+	\item He went ahead and started the GNU Project and Free Software Foundation (FSF). \pause
+	\item GNU was aimed at developing a completely free and open computer operating system and body of application s/w. \pause
+	\item \small{``The GNU General Public License (GPL) says that the code may be copied and modified without restriction and that both copies and derivative works must be distributed \emph{under the same license as the original with no additional restrictions.}"}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Rise of Proprietary Software and Free Software - Conscious Resistance}
+\begin{itemize}
+	\item GNU slowly began gaining ground and was able to produce free replacements for many critical components of an OS. \pause
+	\item GNU Emacs came into being. \pause
+	\item The compiler collection GCC. \pause
+	\item By 1990s, GNU had produced most parts of a free OS except for the kernel. \pause
+	\item Linus Torvalds enters the scene with Linux, a kernel completed with the help of volunteers around the world. \pause
+	\item Becomes GNU Linux, the world's first free and open source operating system.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Rise of Proprietary Software and Free Software - Accidental Resistance}
+\begin{itemize}
+	\item Berkeley Software Distribution (BSD) - University of California, Berkeley. \pause
+	\item Non ideological practice of free software development. \pause
+	\item X Window System developed at MIT allowed proprietary extensions over free software, but by itself was free. \pause
+	\item \TeX , developed by Donald Knuth offering free publishing quality typesetting system was released open source with just some naming restrictions on derivatives. \pause
+	\vspace{0.4cm} \\This presentation is built using `Beamer' which is an extension of \LaTeX , built on \TeX.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Free Versus Open Source}
+\begin{itemize}
+	\item Free? As in \emph{free food}? \pause
+	\item Free as in \emph{freedom}. \pause
+	\item Freedom to share and modify the source code for any purpose.\pause
+	\item Case study : Battle of browsers (1990s), Netscaps vs IE.\pause
+	\item Free software - Morality vs Profitability.\pause
+	\item Conflict of opinion.\pause
+	\item 1998 - the word ``open source" is coined by Open Source Initiative (OSI \includegraphics[scale=0.1]{index.png} ) to disambiguate ``free" and aimed at giving `free software' a good marketing.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Situation Today}
+\begin{itemize}
+	\item Free software has become a culture of choice.\pause
+	\item So what persuades all these people to stick together long enough to produce something useful? \pause
+	\item The feeling that their connection to a project, and influence over it, is directly proportional to their contributions. \pause
+	\item Clearly, projects with corporate sponsorship and/or salaried developers need to be especially careful in this regard.
+\end{itemize}
+\end{frame}
+
+\section{Overview of the development process}
+
+\begin{frame}{Look Around}
+\begin{quote}
+\tiny{``Every good work of software starts by scratching a developer's personal itch."\\ -Eric Raymond, `The Cathedral and the Bazaar'.}
+\end{quote}
+\begin{itemize}
+	\item A good software results when the programmer has a personal interest in seeing the problem solved. \pause
+	\item Today, we also have the phenomenon of organizations-for-profit, corporations, governments, non-profits, etc — starting large, centrally-conceived open source projects from scratch. \pause
+	\item Case Study : Kuali Foundation \pause
+	\item Identifying potential problems that are faced by a large community. \pause
+	\item So, first, \emph{look around}! <github.com, openhub.net, sourceforge.net, directory.fsf.org>
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Start from What You Have}
+\begin{itemize}
+	\item Understanding clearly what the project is and what its not.\pause
+	\item Need for Documentation : Founders Vs New Comers.\pause
+	\item Investments : \emph{hacktivation energy}.\pause
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Start from What You Have}
+\begin{itemize}
+	\item Choose a Good Name. \pause
+	\begin{itemize}
+		\item Gives an idea about what the project does.\pause
+		\item Easy to remember. \pause
+		\item Good manners, good legal sense. \pause
+		\item Getting top-level domains with forwarding to a central home site. \pause
+		\item Handle availability in Twitter, FB.	
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Start from What You Have}
+\begin{itemize}
+	\item Clear mission statement.\pause
+	\item State that the Project is `Free'. \pause
+	\item A brief list of features and requirements.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Start from What You Have}
+\begin{itemize}
+	\item Development Status \pause
+	\begin{itemize}
+		\item Should reflect reality.\pause
+		\item Alpha, Beta releases. \pause
+		\item Availability for download. \pause
+		\item Version Control and Bug Tracker Access. \pause
+		\begin{itemize}
+			\item GitHub.com - based on Git. \pause
+			\item Rate of bug filing. \pause
+		\end{itemize}
+		\item Communication Channels
+		\begin{itemize}
+			\item Mailing List. \pause
+			\item Chat room. \pause
+			\item IRC Channel. \pause
+		\end{itemize}
+		\item Developer Guidelines. 
+	\end{itemize}		
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Start from What You Have}
+\begin{itemize}
+	\item Documentation. \pause
+	\begin{itemize}
+		\item Minimal criteria: \pause
+		\begin{itemize}
+			\item Should tell the reader clearly how much technical expertise they're expected to have. \pause
+			\item Tells clearly how to setup, and make sure that they've installed the software correctly. \pause
+			\item Give one tutorial-style example of how to do a common task. \pause
+			\item Label the areas where the documentation is known to be incomplete. \pause	
+		\end{itemize}
+		\item Developer documentation.	
+	\end{itemize}
+	\item Demos, Screenshots, Videos, and Example Output. \pause
+	\item Hosting.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Choosing a License and Applying It} \pause
+\begin{itemize}
+	\item The ``Do-Anything" licenses (MIT License). \pause
+	\begin{itemize}
+		\item Asserts nominal copyright (without actually restricting copying). \pause
+		\item Code comes with no warranty. \pause
+	\end{itemize}
+	\item The GNU General Public License (GPL). \pause
+	\begin{itemize}
+		\item Translates loosely to - ``If you use my code, make sure you let others use yours."
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Choosing a License and Applying It} \pause
+\begin{itemize}
+	\item Applying a license - Steps : \pause
+	\begin{itemize}
+		\item State the license clearly on the project's front page. \pause
+		\item Put the full license text in a file called COPYING (or LICENSE) included with the source code. \pause
+		\item Put a short notice in a comment at the top of each source file, naming :
+		\begin{itemize}
+			\item Copyright date
+			\item Holder
+			\item The kind of license
+			\item Where to find the full text of the license. 
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Setting the Tone}
+\begin{itemize}
+	\item Avoid private discussions (1 $\langle$ n).\pause
+	\item Zero tolerance to rudeness. \pause
+	\item Practice conspicuous code review. \pause
+	\item Be open from day one! \pause
+	\item Opening a formerly closed project. \pause
+	\item Announcing. \pause
+\end{itemize}
+\end{frame}
+
+\section{Technical Infrastructure}
+\begin{frame}{Overview}
+\begin{itemize}
+	\item Website
+	\item Mailing lists / Message forums
+	\item Version control
+	\item Bug tracking
+	\item Real-time chat
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Website}
+\begin{itemize}
+	\item Canned Hosting Services. \pause
+	\item Github.com \pause
+	\item Setting up a Github account. \pause
+	\begin{enumerate} 
+			\item Go to \emph{\href{https://github.com/}{https://github.com/}} \pause
+			\item Sign up - Get yourself an account. \pause
+			\item Go to \emph{\href{https://guides.github.com/activities/hello-world/}{https://guides.github.com/activities/hello-world/}} \pause
+			\item Learn how to :
+			\begin{enumerate}
+				\item Create a `repository'.
+				\item Open an `issue'.
+				\item Create a `branch'.
+				\item Make a `commit'.
+				\item Open a `pull request'.
+				\item `Merge' a pull request.
+			\end{enumerate}
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\end{document}
