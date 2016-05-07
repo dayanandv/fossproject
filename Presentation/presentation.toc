@@ -1,5 +1,11 @@
-\beamer@endinputifotherversion {3.10pt}
+\beamer@endinputifotherversion {3.24pt}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{History}{11}{0}{2}
-\beamer@sectionintoc {3}{Overview of the development process}{47}{0}{3}
-\beamer@sectionintoc {4}{Technical Infrastructure}{103}{0}{4}
+\beamer@sectionintoc {2}{History}{6}{0}{2}
+\beamer@sectionintoc {3}{Overview of the development process}{14}{0}{3}
+\beamer@sectionintoc {4}{Technical Infrastructure}{24}{0}{4}
+\beamer@sectionintoc {5}{Packaging, Releasing, and Daily Development}{28}{0}{5}
+\beamer@sectionintoc {6}{Licenses, Copyrights and Patents}{46}{0}{6}
+\beamer@sectionintoc {7}{Introduction to GNU Autotools}{57}{0}{7}
+\beamer@sectionintoc {8}{Case Studies}{116}{0}{8}
+\beamer@subsectionintoc {8}{1}{The Apache Project}{118}{0}{8}
+\beamer@subsectionintoc {8}{2}{The Mozilla Project}{200}{0}{8}
